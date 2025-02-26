@@ -16,10 +16,10 @@ Ngày nay, nhu cầu mua sắm trực tuyến ngày càng tăng cao, đặc bi�
 
 ### 3. Công nghệ sử dụng
 
-- **Ngôn ngữ lập trình**: PHP (Laravel 11.43.2)
+- **Ngôn ngữ lập trình**: PHP 
 - **Cơ sở dữ liệu**: MySQL
 - **Front-end**: Blade Templates, HTML, CSS, JavaScript
-- **Thư viện hỗ trợ**: Bootstrap (nếu có), jQuery (nếu có)
+- **Thư viện hỗ trợ**: Bootstrap
 - **Hệ thống quản lý phiên bản**: Git
 - **Máy chủ**: Apache hoặc Nginx
 
@@ -54,7 +54,4 @@ Ngày nay, nhu cầu mua sắm trực tuyến ngày càng tăng cao, đặc bi�
 - Cải thiện trải nghiệm người dùng bằng cách tối ưu giao diện và tốc độ tải trang.
 - Tiến hành kiểm thử và sửa lỗi.
 
-### 6. Kết luận
-
-Dự án đang triển khai theo đúng kế hoạch đã đề ra. Các phần quan trọng như backend và database đã được hoàn thành phần lớn, trong khi frontend và chức năng giỏ hàng đang trong quá trình phát triển. Các bước tiếp theo sẽ tập trung vào tích hợp thanh toán, kiểm thử và tối ưu hóa hệ thống. Chúng tôi tin rằng khi hoàn thành, hệ thống này sẽ mang lại trải nghiệm mua sắm trực tuyến hiệu quả và tiện lợi cho khách hàng.
 
