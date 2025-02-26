@@ -8,20 +8,17 @@ use App\Http\Middleware\AdminMiddleware;
 
 class ProductController extends Controller
 {
-    // Hiển thị trang home cho mọi người (không cần đăng nhập)
     public function indexPublic()
     {
         $products = Product::all();
         return view('index', compact('products')); // Sử dụng index.blade.php làm home
     }
-
-    // Quản lý sản phẩm (chỉ cho admin, dùng AdminMiddleware thủ công)
     public function index()
     {
         $middleware = new AdminMiddleware();
         return $middleware->handle(request(), function () {
             $products = Product::all();
-            return view('admin.products.index', compact('products')); // Sử dụng admin.products.index cho danh sách sản phẩm
+            return view('admin.products.index', compact('products')); 
         });
     }
 
@@ -29,7 +26,7 @@ class ProductController extends Controller
     {
         $middleware = new AdminMiddleware();
         return $middleware->handle(request(), function () {
-            return view('admin.products.create'); // Sử dụng admin.products.create cho form tạo sản phẩm
+            return view('admin.products.create'); 
         });
     }
 
@@ -59,7 +56,7 @@ class ProductController extends Controller
     {
         $middleware = new AdminMiddleware();
         return $middleware->handle(request(), function () use ($product) {
-            return view('admin.products.edit', compact('product')); // Sử dụng admin.products.edit cho form chỉnh sửa sản phẩm
+            return view('admin.products.edit', compact('product')); 
         });
     }
 
