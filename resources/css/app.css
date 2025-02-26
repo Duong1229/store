@@ -1,12 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 .product-card h3 {
-    color: #000000; /* Màu đen */
+    color: #1a202c;
 }
 
 .product-card p {
-    color: #4a5568; /* Màu xám đậm */
+    color: #4a5568;
 }
 
 .btn-primary {
