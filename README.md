@@ -53,5 +53,40 @@ Ngày nay, nhu cầu mua sắm trực tuyến ngày càng tăng cao, đặc bi�
 - Xây dựng trang quản trị với đầy đủ tính năng quản lý đơn hàng, sản phẩm và người dùng.
 - Cải thiện trải nghiệm người dùng bằng cách tối ưu giao diện và tốc độ tải trang.
 - Tiến hành kiểm thử và sửa lỗi.
+<h2>Sơ đồ cấu trúc và sơ đồ thuật toán </h2>
+
+<h3>1. Biểu đồ hoạt động</h3>
+![sequence_view_products](https://github.com/user-attachments/assets/b700eda5-a7b4-4cd5-a59b-7644aab6cd5c)
+
+<h3>2. Biểu đồ UML các chức năng</h3>
+-  Chức năng đăng nhập 
+![dangnhap](https://github.com/user-attachments/assets/37c8cbbd-0ec7-4aa5-b21e-381474c18513)
+
+- Chức năng thêm sản phẩm ![themsp](https://github.com/user-attachments/assets/832d093d-f284-4e95-96de-46d44e804ccf)
+
+- Chức năng sửa sản phẩm
+ ![suasanpham](https://github.com/user-attachments/assets/39c8bda3-ee6b-4359-b83d-ca93232b4708)
+
+
+- Chức năng xóa sản phẩm![xoasanpham](https://github.com/user-attachments/assets/2fd1ac52-4bd3-48be-8a75-a57875bf4d30)
+
+ 
+- Chức năng thêm đơn hàng ![themdon](https://github.com/user-attachments/assets/969242c7-d8a7-46f5-85b3-0e2faada3b3d)
+
+
+- Chức năng sửa đơn hàng![suadon](https://github.com/user-attachments/assets/689ed5e1-ab28-4569-8f01-7ca88de0a586)
+
+
+ 
+- Chức năng xóa đơn hàng![xoahoadon](https://github.com/user-attachments/assets/9fcb7e89-1eeb-40ad-b1d9-9768eb2231a6)
+
+ 
+-	Trang đăng kí và đăng nhập dành cho khách hàng![dangnhaokhachhang](https://github.com/user-attachments/assets/8013a516-b524-4805-8527-20268c7c35b4)
+
+ 
+-	Chức năng checkout, làm việc với giỏ hàng, …
+ ![check](https://github.com/user-attachments/assets/2cbf874a-c5f3-4198-b8be-b1173f230204)
+
+
 
 
