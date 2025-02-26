@@ -1,66 +1,60 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+DỰ ÁN: XÂY DỰNG ỨNG DỤNG WEB BÁN ĐIỆN THOẠI VỚI LARAVEL VÀ PHP
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+### 1. Giới thiệu dự án
 
-## About Laravel
+Ngày nay, nhu cầu mua sắm trực tuyến ngày càng tăng cao, đặc biệt là trong lĩnh vực công nghệ. Một nền tảng bán hàng chuyên nghiệp không chỉ giúp doanh nghiệp dễ dàng tiếp cận khách hàng mà còn giúp người mua có trải nghiệm tốt hơn trong việc tìm kiếm và đặt mua sản phẩm. Dự án này hướng đến việc xây dựng một hệ thống website bán điện thoại di động với đầy đủ các tính năng cần thiết để hỗ trợ khách hàng trong việc lựa chọn, đặt hàng và thanh toán trực tuyến.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Ứng dụng web được xây dựng bằng Laravel 11.43.2 và PHP với kiến trúc hiện đại, đảm bảo hiệu suất, bảo mật và tính linh hoạt cao. Dự án bao gồm hai phần chính: trang bán hàng dành cho khách hàng và trang quản trị dành cho quản lý cửa hàng.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+### 2. Mục tiêu dự án
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+- Xây dựng một hệ thống bán hàng trực tuyến chuyên nghiệp.
+- Cung cấp giao diện thân thiện, dễ sử dụng cho cả khách hàng và quản trị viên.
+- Tích hợp các tính năng cần thiết như giỏ hàng, thanh toán trực tuyến, quản lý đơn hàng và quản lý sản phẩm.
+- Đảm bảo hiệu suất tốt và bảo mật hệ thống.
+- Hỗ trợ nhiều phương thức thanh toán khác nhau.
 
-## Learning Laravel
+### 3. Công nghệ sử dụng
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+- **Ngôn ngữ lập trình**: PHP (Laravel 11.43.2)
+- **Cơ sở dữ liệu**: MySQL
+- **Front-end**: Blade Templates, HTML, CSS, JavaScript
+- **Thư viện hỗ trợ**: Bootstrap (nếu có), jQuery (nếu có)
+- **Hệ thống quản lý phiên bản**: Git
+- **Máy chủ**: Apache hoặc Nginx
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+### 4. Tiến độ thực hiện
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+#### 4.1. Giai đoạn 1: Phân tích và thiết kế (Hoàn thành)
+- Xác định yêu cầu chức năng của hệ thống.
+- Xây dựng mô hình dữ liệu và kiến trúc phần mềm.
+- Thiết kế giao diện sơ bộ cho hệ thống.
 
-## Laravel Sponsors
+#### 4.2. Giai đoạn 2: Triển khai cơ sở dữ liệu (Hoàn thành)
+- Xây dựng cơ sở dữ liệu gồm các bảng chính như users, products, orders, cart.
+- Thiết lập các ràng buộc và quan hệ giữa các bảng dữ liệu.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+#### 4.3. Giai đoạn 3: Phát triển backend (Đang triển khai)
+- Xây dựng chức năng quản lý sản phẩm: thêm, sửa, xóa.
+- Xây dựng chức năng đăng ký, đăng nhập và quản lý người dùng.
+- Triển khai chức năng giỏ hàng và đặt hàng (đang phát triển).
 
-### Premium Partners
+#### 4.4. Giai đoạn 4: Xây dựng frontend (Đang triển khai)
+- Hoàn thiện giao diện trang chủ và danh mục sản phẩm.
+- Thiết kế trang chi tiết sản phẩm và trang giỏ hàng.
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+#### 4.5. Giai đoạn 5: Tích hợp thanh toán và kiểm thử hệ thống (Sắp triển khai)
+- Tích hợp cổng thanh toán trực tuyến (VNPay, Momo,...).
+- Kiểm thử toàn bộ hệ thống trước khi triển khai.
 
-## Contributing
+### 5. Kế hoạch tiếp theo
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+- Hoàn thiện giỏ hàng và thanh toán.
+- Xây dựng trang quản trị với đầy đủ tính năng quản lý đơn hàng, sản phẩm và người dùng.
+- Cải thiện trải nghiệm người dùng bằng cách tối ưu giao diện và tốc độ tải trang.
+- Tiến hành kiểm thử và sửa lỗi.
 
-## Code of Conduct
+### 6. Kết luận
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+Dự án đang triển khai theo đúng kế hoạch đã đề ra. Các phần quan trọng như backend và database đã được hoàn thành phần lớn, trong khi frontend và chức năng giỏ hàng đang trong quá trình phát triển. Các bước tiếp theo sẽ tập trung vào tích hợp thanh toán, kiểm thử và tối ưu hóa hệ thống. Chúng tôi tin rằng khi hoàn thành, hệ thống này sẽ mang lại trải nghiệm mua sắm trực tuyến hiệu quả và tiện lợi cho khách hàng.
 
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
