@@ -56,10 +56,12 @@ Ngày nay, nhu cầu mua sắm trực tuyến ngày càng tăng cao, đặc bi�
 <h2>Sơ đồ cấu trúc và sơ đồ thuật toán </h2>
 
 <h3>1. Biểu đồ hoạt động</h3>
+
 ![sequence_view_products](https://github.com/user-attachments/assets/b700eda5-a7b4-4cd5-a59b-7644aab6cd5c)
 
 <h3>2. Biểu đồ UML các chức năng</h3>
 -  Chức năng đăng nhập 
+
 ![dangnhap](https://github.com/user-attachments/assets/37c8cbbd-0ec7-4aa5-b21e-381474c18513)
 
 - Chức năng thêm sản phẩm ![themsp](https://github.com/user-attachments/assets/832d093d-f284-4e95-96de-46d44e804ccf)
@@ -87,6 +89,9 @@ Ngày nay, nhu cầu mua sắm trực tuyến ngày càng tăng cao, đặc bi�
 -	Chức năng checkout, làm việc với giỏ hàng, …
  ![check](https://github.com/user-attachments/assets/2cbf874a-c5f3-4198-b8be-b1173f230204)
 
+<h2>Thông tin dự án</h2>
+Link Github Repo: https://github.com/Duong1229/store
+Link web: http://127.0.0.1:8000/
 
 
 
