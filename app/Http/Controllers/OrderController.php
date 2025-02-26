@@ -47,7 +47,7 @@ class OrderController extends Controller
         $middleware = new AdminMiddleware();
         return $middleware->handle(request(), function () {
             $orders = Order::with('user')->get();
-            return view('orders.index', compact('orders')); // Sử dụng orders/index.blade.php
+            return view('admin.orders.index', compact('orders')); // Sử dụng admin.orders.index cho danh sách đơn hàng
         });
     }
 
@@ -55,7 +55,7 @@ class OrderController extends Controller
     {
         $middleware = new AdminMiddleware();
         return $middleware->handle(request(), function () {
-            return view('orders.create'); // Sử dụng orders/create.blade.php
+            return view('admin.orders.create'); // Sử dụng admin.orders.create cho form tạo đơn hàng
         });
     }
 
@@ -78,7 +78,7 @@ class OrderController extends Controller
     {
         $middleware = new AdminMiddleware();
         return $middleware->handle(request(), function () use ($order) {
-            return view('orders.edit', compact('order')); // Sử dụng orders/edit.blade.php
+            return view('admin.orders.edit', compact('order')); // Sử dụng admin.orders.edit cho form chỉnh sửa đơn hàng
         });
     }
 

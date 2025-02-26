@@ -21,7 +21,7 @@ class ProductController extends Controller
         $middleware = new AdminMiddleware();
         return $middleware->handle(request(), function () {
             $products = Product::all();
-            return view('products.index', compact('products')); // Sử dụng products/index.blade.php
+            return view('admin.products.index', compact('products')); // Sử dụng admin.products.index cho danh sách sản phẩm
         });
     }
 
@@ -29,7 +29,7 @@ class ProductController extends Controller
     {
         $middleware = new AdminMiddleware();
         return $middleware->handle(request(), function () {
-            return view('products.create'); // Sử dụng products/create.blade.php
+            return view('admin.products.create'); // Sử dụng admin.products.create cho form tạo sản phẩm
         });
     }
 
@@ -59,7 +59,7 @@ class ProductController extends Controller
     {
         $middleware = new AdminMiddleware();
         return $middleware->handle(request(), function () use ($product) {
-            return view('products.edit', compact('product')); // Sử dụng products/edit.blade.php
+            return view('admin.products.edit', compact('product')); // Sử dụng admin.products.edit cho form chỉnh sửa sản phẩm
         });
     }
 

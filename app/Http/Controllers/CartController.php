@@ -21,6 +21,15 @@ class CartController extends Controller
         ]);
         return redirect()->back()->with('success', 'Đã thêm vào giỏ hàng');
     }
+    public function remove($product)
+{
+    $cart = session()->get('cart', []);
+    if(isset($cart[$product->id])) {
+        unset($cart[$product->id]);
+        session()->put('cart', $cart);
+    }
+    return redirect()->back()->with('success', 'Sản phẩm đã được xóa khỏi giỏ hàng!');
+}
 
     public function index()
     {

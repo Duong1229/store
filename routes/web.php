@@ -16,7 +16,7 @@ Route::middleware('auth')->group(function () {
     Route::post('/checkout', [OrderController::class, 'checkout'])->name('checkout');
 
     Route::prefix('admin')->group(function () {
-        Route::get('/dashboard', [AdminController::class, 'dashboard'])->name('dashboard');
+        Route::get('/dashboard', [AdminController::class, 'dashboard'])->name('admin.dashboard');
         Route::resource('products', ProductController::class);
         Route::resource('orders', OrderController::class);
     });
