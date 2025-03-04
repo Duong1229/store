@@ -11,8 +11,12 @@ class ProductController extends Controller
     public function indexPublic()
     {
         $products = Product::all();
-        return view('index', compact('products')); // Sử dụng index.blade.php làm home
+        return view('index', compact('products')); 
     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 8ce5afe (update)
     public function index()
     {
         $middleware = new AdminMiddleware();
@@ -39,16 +43,24 @@ class ProductController extends Controller
                 'description' => 'required',
                 'price' => 'required|numeric',
                 'stock' => 'required|integer',
-                'image' => 'nullable|image'
+                'image_url' => 'nullable|image' 
             ]);
 
             $product = new Product($request->all());
-            if ($request->hasFile('image')) {
-                $product->image = $request->file('image')->store('products', 'public');
+            if ($request->hasFile('image_url')) {
+                $product->image_url = $request->file('image_url')->store('products', 'public');
             }
             $product->save();
 
-            return redirect()->route('admin.products.index')->with('success', 'Sản phẩm đã được thêm');
+            return redirect()->route('products.index')->with('success', 'Sản phẩm đã được thêm');
+        });
+    }
+
+    public function show(Product $product)
+    {
+        $middleware = new AdminMiddleware();
+        return $middleware->handle(request(), function () use ($product) {
+            return view('admin.products.show', compact('product'));
         });
     }
 
@@ -69,16 +81,16 @@ class ProductController extends Controller
                 'description' => 'required',
                 'price' => 'required|numeric',
                 'stock' => 'required|integer',
-                'image' => 'nullable|image'
+                'image_url' => 'nullable|image' 
             ]);
 
             $product->update($request->all());
-            if ($request->hasFile('image')) {
-                $product->image = $request->file('image')->store('products', 'public');
+            if ($request->hasFile('image_url')) {
+                $product->image_url = $request->file('image_url')->store('products', 'public');
                 $product->save();
             }
 
-            return redirect()->route('admin.products.index')->with('success', 'Sản phẩm đã được cập nhật');
+            return redirect()->route('products.index')->with('success', 'Sản phẩm đã được cập nhật');
         });
     }
 
@@ -87,7 +99,7 @@ class ProductController extends Controller
         $middleware = new AdminMiddleware();
         return $middleware->handle(request(), function () use ($product) {
             $product->delete();
-            return redirect()->route('admin.products.index')->with('success', 'Sản phẩm đã bị xóa');
+            return redirect()->route('products.index')->with('success', 'Sản phẩm đã bị xóa');
         });
     }
 }

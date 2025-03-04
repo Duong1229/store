@@ -14,6 +14,7 @@ Route::middleware('auth')->group(function () {
     Route::post('/cart/add/{product}', [CartController::class, 'add'])->name('cart.add');
     Route::get('/cart', [CartController::class, 'index'])->name('cart.index');
     Route::post('/checkout', [OrderController::class, 'checkout'])->name('checkout');
+    Route::delete('/cart/remove/{cartId}', [CartController::class, 'remove'])->name('cart.remove');
 
     Route::prefix('admin')->group(function () {
         Route::get('/dashboard', [AdminController::class, 'dashboard'])->name('admin.dashboard');
