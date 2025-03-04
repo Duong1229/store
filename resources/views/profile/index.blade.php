@@ -10,7 +10,7 @@
         <form action="{{ route('profile.destroy') }}" method="POST" class="mt-4">
             @csrf
             @method('DELETE')
-            <button type="submit" class="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded" onclick="return confirm('Bạn có chắc muốn xóa tài khoản?')">Xóa tài khoản</button>
+            <button type="submit" class="bg-red-500 hover:bg-red-600 text-black px-4 py-2 rounded" onclick="return confirm('Bạn có chắc muốn xóa tài khoản?')">Xóa tài khoản</button>
         </form>
     </div>
 @endsection

@@ -21,7 +21,7 @@
                             <td class="py-2 px-4">{{ number_format($order->total) }} VNĐ</td>
                             <td class="py-2 px-4">{{ $order->status }}</td>
                             <td class="py-2 px-4">
-                                <a href="{{ route('orders.edit', $order) }}" class="bg-blue-500 hover:bg-blue-600 text-white px-2 py-1 rounded">
+                                <a href="{{ route('orders.edit', $order) }}" class="bg-blue-500 hover:bg-blue-600 text-black px-2 py-1 rounded">
                                     Xem chi tiết
                                 </a>
                             </td>

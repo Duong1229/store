@@ -24,7 +24,7 @@
                 <label for="image_url" class="block text-sm font-medium text-gray-700">Hình ảnh</label>
                 <input type="file" name="image_url" id="image_url" class="mt-1 block w-full">
             </div>
-            <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded">Lưu</button>
+            <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-black px-4 py-2 rounded">Lưu</button>
         </form>
     </div>
 @endsection

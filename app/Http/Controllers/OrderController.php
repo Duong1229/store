@@ -25,7 +25,7 @@ class OrderController extends Controller
         $order = Order::create([
             'user_id' => $user->id,
             'total' => $total,
-            'status' => 'pending'
+            'status' => 'Chờ xử lý'
         ]);
 
         foreach ($cartItems as $item) {

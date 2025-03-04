@@ -12,7 +12,7 @@
             <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
             <input type="text" name="name" id="name" value="{{ old('name', $user->name) }}" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
             @error('name')
-                <p class="text-red-500 text-xs mt-1">{{ $message }}</p>
+                <p class="text-black-500 text-xs mt-1">{{ $message }}</p>
             @endif
         </div>
         <div class="mb-4">
@@ -22,7 +22,7 @@
                 <p class="text-red-500 text-xs mt-1">{{ $message }}</p>
             @endif
         </div>
-        <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded">Update</button>
+        <button type="submit" class="bg-blue-500 text-black px-4 py-2 rounded">Update</button>
     </form>
 </div>
 @endsection
