@@ -16,12 +16,12 @@
                             <form action="{{ route('cart.add', $product) }}" method="POST" class="mt-2">
                                 @csrf
                                 <button type="submit" 
-                                        class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded w-full">
+                                        class="bg-blue-500 hover:bg-blue-600 text-black px-4 py-2 rounded w-full">
                                     Thêm vào giỏ hàng
                                 </button>
                             </form>
                         @else
-                            <a href="{{ route('login') }}" class="mt-2 bg-gray-500 hover:bg-gray-600 text-white px-4 py-2 rounded w-full text-center block">
+                            <a href="{{ route('login') }}" class="mt-2 bg-gray-500 hover:bg-gray-600 text-black px-4 py-2 rounded w-full text-center block">
                                 Đăng nhập để thêm vào giỏ
                             </a>
                         @endauth

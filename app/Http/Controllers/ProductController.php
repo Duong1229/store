@@ -13,10 +13,7 @@ class ProductController extends Controller
         $products = Product::all();
         return view('index', compact('products')); 
     }
-<<<<<<< HEAD
-=======
 
->>>>>>> 8ce5afe (update)
     public function index()
     {
         $middleware = new AdminMiddleware();
