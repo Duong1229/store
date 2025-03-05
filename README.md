@@ -34,10 +34,10 @@ Ngày nay, nhu cầu mua sắm trực tuyến ngày càng tăng cao, đặc bi�
 - Xây dựng cơ sở dữ liệu gồm các bảng chính như users, products, orders, cart.
 - Thiết lập các ràng buộc và quan hệ giữa các bảng dữ liệu.
 
-#### 4.3. Giai đoạn 3: Phát triển backend (Đang triển khai)
+#### 4.3. Giai đoạn 3: Phát triển backend (Hoàn Thành)
 - Xây dựng chức năng quản lý sản phẩm: thêm, sửa, xóa.
 - Xây dựng chức năng đăng ký, đăng nhập và quản lý người dùng.
-- Triển khai chức năng giỏ hàng và đặt hàng (đang phát triển).
+- Triển khai chức năng giỏ hàng và đặt hàng 
 
 #### 4.4. Giai đoạn 4: Xây dựng frontend (Đang triển khai)
 - Hoàn thiện giao diện trang chủ và danh mục sản phẩm.
@@ -91,7 +91,11 @@ Ngày nay, nhu cầu mua sắm trực tuyến ngày càng tăng cao, đặc bi�
 
 <h2>Thông tin dự án</h2>
 Link Github Repo: https://github.com/Duong1229/store
+
 Link web: http://127.0.0.1:8000/
+<h2>DEMO SẢN PHẨM</h2>
+
+[DEMO](https://youtu.be/41qhtWVcHZk?feature=shared)
 
 
 
