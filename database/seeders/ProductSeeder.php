@@ -7,51 +7,38 @@ use App\Models\Product;
 
 class ProductSeeder extends Seeder
 {
-    public function run(): void
+    public function run()
     {
         $products = [
             [
                 'name' => 'iPhone 14 Pro',
-                'description' => 'Điện thoại cao cấp từ Apple với chip A16 Bionic.',
+                'description' => 'iPhone 14 Pro với màn hình Super Retina XDR, chip A16 Bionic, camera 48MP.',
                 'price' => 25990000,
-                'image' => null,
-                'created_at' => now(),
-                'updated_at' => now(),
+                'stock' => 50,
+                'image_url' => null, 
             ],
             [
                 'name' => 'Samsung Galaxy S23',
-                'description' => 'Flagship từ Samsung với camera 50MP.',
+                'description' => 'Samsung Galaxy S23 với màn hình Dynamic AMOLED 2X, chip Snapdragon 8 Gen 2.',
                 'price' => 19990000,
-                'image' => null,
-                'created_at' => now(),
-                'updated_at' => now(),
+                'stock' => 30,
+                'image_url' => null, 
             ],
             [
                 'name' => 'Xiaomi 13',
-                'description' => 'Điện thoại giá rẻ với hiệu năng mạnh mẽ.',
+                'description' => 'Xiaomi 13 với màn hình AMOLED 6.36", chip Snapdragon 8 Gen 2, camera Leica.',
                 'price' => 12990000,
-                'image' => null,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'name' => 'Oppo Reno 8',
-                'description' => 'Thiết kế đẹp, camera selfie đỉnh cao.',
-                'price' => 10990000,
-                'image' => null,
-                'created_at' => now(),
-                'updated_at' => now(),
+                'stock' => 20,
+                'image_url' => null, 
             ],
             [
                 'name' => 'Nokia G50',
-                'description' => 'Điện thoại bền bỉ với pin lớn.',
+                'description' => 'Nokia G50 với màn hình 6.82", pin 5000mAh, camera 48MP.',
                 'price' => 5990000,
-                'image' => null,
-                'created_at' => now(),
-                'updated_at' => now(),
+                'stock' => 15,
+                'image_url' => null, 
             ],
         ];
-
         foreach ($products as $product) {
             Product::create($product);
         }

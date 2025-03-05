@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Product;
 use Illuminate\Http\Request;
 use App\Http\Middleware\AdminMiddleware;
+use Illuminate\Support\Facades\Storage;
 
 class ProductController extends Controller
 {
@@ -40,13 +41,17 @@ class ProductController extends Controller
                 'description' => 'required',
                 'price' => 'required|numeric',
                 'stock' => 'required|integer',
-                'image_url' => 'nullable|image' 
+                'image_url' => 'nullable|image|mimes:jpeg,png,jpg|max:2048' 
             ]);
 
-            $product = new Product($request->all());
+            $product = new Product($request->except('image_url')); 
             if ($request->hasFile('image_url')) {
-                $product->image_url = $request->file('image_url')->store('products', 'public');
+                $image = $request->file('image_url');
+                $imageName = time() . '.' . $image->getClientOriginalExtension();
+                $image->storeAs('public/products', $imageName); 
+                $product->image_url = 'products/' . $imageName; 
             }
+
             $product->save();
 
             return redirect()->route('products.index')->with('success', 'Sản phẩm đã được thêm');
@@ -78,15 +83,23 @@ class ProductController extends Controller
                 'description' => 'required',
                 'price' => 'required|numeric',
                 'stock' => 'required|integer',
-                'image_url' => 'nullable|image' 
+                'image_url' => 'nullable|image|mimes:jpeg,png,jpg|max:2048' 
             ]);
 
-            $product->update($request->all());
+            $product->update($request->except('image_url')); 
+
             if ($request->hasFile('image_url')) {
-                $product->image_url = $request->file('image_url')->store('products', 'public');
+                // Xóa ảnh cũ 
+                if ($product->image_url) {
+                    Storage::delete('public/' . $product->image_url);
+                }
+
+                $image = $request->file('image_url');
+                $imageName = time() . '.' . $image->getClientOriginalExtension();
+                $image->storeAs('public/products', $imageName); 
+                $product->image_url = 'products/' . $imageName; 
                 $product->save();
             }
-
             return redirect()->route('products.index')->with('success', 'Sản phẩm đã được cập nhật');
         });
     }
@@ -95,6 +108,9 @@ class ProductController extends Controller
     {
         $middleware = new AdminMiddleware();
         return $middleware->handle(request(), function () use ($product) {
+            if ($product->image_url) {
+                Storage::delete('public/' . $product->image_url);
+            }
             $product->delete();
             return redirect()->route('products.index')->with('success', 'Sản phẩm đã bị xóa');
         });
