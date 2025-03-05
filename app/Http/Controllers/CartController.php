@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Cart;
 use App\Models\Product;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class CartController extends Controller
 {
@@ -21,15 +22,24 @@ class CartController extends Controller
         ]);
         return redirect()->back()->with('success', 'Đã thêm vào giỏ hàng');
     }
-    public function remove($product)
-{
-    $cart = session()->get('cart', []);
-    if(isset($cart[$product->id])) {
-        unset($cart[$product->id]);
-        session()->put('cart', $cart);
+
+    public function remove($productId)
+    {
+        if (!auth()->check()) {
+            return redirect('/login')->with('error', 'Vui lòng đăng nhập để xóa sản phẩm khỏi giỏ hàng.');
+        }
+
+        $cartItem = Cart::where('user_id', auth()->id())
+                        ->where('product_id', $productId)
+                        ->first();
+
+        if ($cartItem) {
+            $cartItem->delete();
+            return redirect()->route('cart.index')->with('success', 'Sản phẩm đã được xóa khỏi giỏ hàng.');
+        }
+
+        return redirect()->route('cart.index')->with('error', 'Sản phẩm không tồn tại trong giỏ hàng.');
     }
-    return redirect()->back()->with('success', 'Sản phẩm đã được xóa khỏi giỏ hàng!');
-}
 
     public function index()
     {
